@@ -91,13 +91,13 @@ function mostrarError(mensaje) {
 
 function consultaApi() {
 
-	mostrarSpinner();
+	
 	const { moneda, criptomoneda } = objBusqueda;
 
 	//url 
 	const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`
 
-  
+  // mostrarSpinner();
 
 	fetch(url) 
 		.then(respuesta => respuesta.json())
@@ -138,20 +138,20 @@ limpiarHTML();
 }
 function limpiarHTML(){
 	while(resultado.firstChild){
-		resultado.firstChild,removeChild(firstChild);
+		resultado.removeChild(firstChild);
 	}
 }
 
-function mostrarSpinner(){
-	const spinner = document.createElement('div');
-	spinner.classList.add('spinner');
+// function mostrarSpinner(){
+// 	const spinner = document.createElement('div');
+// 	spinner.classList.add('spinner');
 
-	spinner.innerHTML = `
-	<div class=bounce1></div>
-	<div class=bounce2></div>
-	<div class=bounce3></div>
-	`
+// 	spinner.innerHTML = `
+// 	<div class=bounce1></div>
+// 	<div class=bounce2></div>
+// 	<div class=bounce3></div>
+// 	`
 
-	//mostrar spinner 
-	resultado.appendChild(spinner)
-}
+// 	//mostrar spinner 
+// 	resultado.appendChild(spinner)
+// }

@@ -90,14 +90,12 @@ function mostrarError(mensaje) {
 }
 
 function consultaApi() {
-
-	
 	const { moneda, criptomoneda } = objBusqueda;
 
 	//url 
 	const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${criptomoneda}&tsyms=${moneda}`
 
-  // mostrarSpinner();
+  //mostrarSpinner();
 
 	fetch(url) 
 		.then(respuesta => respuesta.json())

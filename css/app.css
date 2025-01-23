@@ -50,6 +50,10 @@ input[type="submit"]{
 
 .resultado {
     color: white;
+    border: 1px white solid;
+    border-radius: 10%;
+    padding: 1rem;
+    text-align: center;
 
 }
 .resultado h2 {
